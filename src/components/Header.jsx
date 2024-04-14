@@ -1,9 +1,34 @@
 import React from 'react'
 
+import { makeStyles } from "@mui/styles";
+import { AppBar, Toolbar } from "@mui/material";
+
+const useStyles = makeStyles({
+
+    logo: {
+        width: 90,
+        padding: 3,
+        mixBlendMode: 'multiply'
+    },
+    navbar: {
+        background: ['#000', '!important'],
+        position: ['static', '!important'],
+        height: [50, '!important']
+    }
+})
+
 const Header = () => {
-  return (
+
+    const classes = useStyles();
+    const logo = 'https://www.pngall.com/wp-content/uploads/13/Anime-Logo-Transparent.png';
+ 
+ 
+    return (
     <div>
-      <p>abv</p>
+        <img src={logo} alt={"LOGO"}  className={classes.logo}/>
+       
+       
+
     </div>
   )
 }
