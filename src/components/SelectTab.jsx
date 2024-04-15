@@ -3,11 +3,10 @@ import { useState, useContext } from 'react';
 import { Box, Tabs, Tab } from '@mui/material';
 import { makeStyles } from '@mui/styles';
 
-
+//components
 import CreateTable from './CreateTable';
 import CreateJsonText from './CreateJsonText';
 import { DataContext } from '../context/DataProvider';
-
 
 const useStyles = makeStyles({
     component: {
@@ -23,7 +22,6 @@ const useStyles = makeStyles({
 
 const SelectTab = () => {
     const classes = useStyles();
-   
     const [value, setValue] = useState(0);
 
     const { paramData, setParamData, headerData, setHeaderData } = useContext(DataContext);
@@ -35,13 +33,12 @@ const SelectTab = () => {
     return (
         <Box className={classes.component}>
             <Tabs value={value} onChange={handleChange}
-                TabIndicatorProps={{ sx: { backgroundColor: "#F26B3A", height: 4, bottom: 2} }}
+                TabIndicatorProps={{ sx: { backgroundColor: "#E80B0B", height: 4, bottom: 2} }}
             textColor="none">
                 <Tab label="Params" className={classes.tab} />
                 <Tab label="Headers" className={classes.tab} />
                 <Tab label="Body" className={classes.tab} />
             </Tabs>
-
             <Box
                 role="tabpanel"
                 hidden={value !== 0}
@@ -50,7 +47,6 @@ const SelectTab = () => {
             >
                 <CreateTable text={'Query Params'} data={paramData} setData={setParamData} />
             </Box>
-
             <Box
                 role="tabpanel"
                 hidden={value !== 1}
@@ -59,7 +55,6 @@ const SelectTab = () => {
             >
                 <CreateTable text={'Headers'} data={headerData} setData={setHeaderData} />
             </Box>
-
             <Box
                 role="tabpanel"
                 hidden={value !== 2}

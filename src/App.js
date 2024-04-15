@@ -1,15 +1,14 @@
 
-import Home from './components/Home'
+//components
+import Home from './components/Home';
+
 import DataProvider from './context/DataProvider';
 
 function App() {
   return (
-    
-    <>
-       <DataProvider>
+    <DataProvider>
       <Home />
     </DataProvider>
-    </>
   );
 }
 

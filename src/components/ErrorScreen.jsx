@@ -1,3 +1,4 @@
+
 import { Box, Typography } from '@mui/material';
 import { makeStyles } from '@mui/styles';
 
@@ -25,4 +26,4 @@ const ErrorScreen = () => {
     )
 }
 
-export default ErrorScreen
+export default ErrorScreen;

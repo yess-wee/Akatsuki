@@ -12,14 +12,15 @@ const useStyles = makeStyles({
         justifyContent: 'space-between'
     },
     select: {
-        width: 130,
-        height: 50,
+        width: 150,
+        height: 40,
         background: '#F6F6F6'
     },
     button: {
         width: 100,
         height: 40,
-        marginLeft: [5, '!important']
+        marginLeft: [5, '!important'],
+        
     },
     textfield: {
         width: '100%',
@@ -44,9 +45,9 @@ const Form = ({ onSendClick }) => {
         <Box className={classes.component}>
             <Select 
                 className={classes.select} 
-                 value={formData.type} 
+                value={formData.type} 
                 label="POST" 
-               onChange={(e) => handleChange(e)}
+                onChange={(e) => handleChange(e)}
             >
                 <MenuItem value={'POST'}>POST</MenuItem>
                 <MenuItem value={'GET'}>GET</MenuItem>
@@ -56,7 +57,7 @@ const Form = ({ onSendClick }) => {
                 className={classes.textfield} 
                 onChange={(e) => onUrlChange(e)}
             />
-            <Button className={classes.button} variant="contained" onClick={() => onSendClick()}>Send</Button>
+            <Button className={classes.button} variant="contained" onClick={() => onSendClick()} style={{backgroundColor:'black'}}>Send</Button>
         </Box>
     )
 }
