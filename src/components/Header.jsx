@@ -1,7 +1,7 @@
 import React from 'react'
 
 import { makeStyles } from "@mui/styles";
-import { AppBar, Toolbar } from "@mui/material";
+//import { AppBar, Toolbar, colors } from "@mui/material";
 
 const useStyles = makeStyles({
 
@@ -14,7 +14,9 @@ const useStyles = makeStyles({
         background: ['#000', '!important'],
         position: ['static', '!important'],
         height: [50, '!important']
-    }
+    },
+   
+    
 })
 
 const Header = () => {
@@ -24,7 +26,8 @@ const Header = () => {
  
  
     return (
-    <div>
+    <div className={classes.headerContainer}>
+       
         <img src={logo} alt={"LOGO"}  className={classes.logo}/>
        
        
