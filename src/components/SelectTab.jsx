@@ -3,7 +3,6 @@ import { useState, useContext } from 'react';
 import { Box, Tabs, Tab } from '@mui/material';
 import { makeStyles } from '@mui/styles';
 
-//components
 import CreateTable from './CreateTable';
 import CreateJsonText from './CreateJsonText';
 import { DataContext } from '../context/DataProvider';

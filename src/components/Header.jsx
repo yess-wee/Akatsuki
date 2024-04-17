@@ -2,6 +2,8 @@
 import { makeStyles } from "@mui/styles";
 import { AppBar, Toolbar } from "@mui/material";
 
+import {Box} from '@mui/system'
+
 const useStyles = makeStyles({
     logo: {
         width: 100,
@@ -21,13 +23,11 @@ const Header = () => {
 
     return (
         <div>
-            <nav style={{backgroundColor:"black"}}>
+
+
+            <nav style={{backgroundColor:"black", height:80}}>
+
             <img src={logo} alt="logo" className={classes.logo} />    
-            {/* <AppBar className={classes.navbar}>
-                <Toolbar>
-                </Toolbar>
-            </AppBar> */}
-            <p style={{textEmphasisColor:"white"}}>AKATSUKI</p>
             </nav>
         </div>
     )
